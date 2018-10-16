@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run(){
+				var myDate=new Date();
+				var t =myDate.getTime();
+				
+				
+				var t2=Date.parse("Feb 23, 2018");
+				var time=parseInt((t2-t)/1000/60/60/24)+"天"+(23-myDate.getHours())+"小时"+(59-myDate.getMinutes())+"分"+(59-myDate.getSeconds())+"秒";
+				var d=document.getElementById("h2");
+				
+				d.innerHTML=time;
+			}
+			setInterval("run()",1000);
+		</script>
+		<style>
+			#h1{
+				border: 1px solid red;
+				width: 100%;
+				height: 400px;
+				margin-top: 200px;
+				background-color: lightskyblue;
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="h1" align="center">
+			<div></div><br /><br />
+			<div>距补习班结束还有</div>
+			<div id="h2" style="color: red;"></div>
+		</div>
+	</body>
+</html>

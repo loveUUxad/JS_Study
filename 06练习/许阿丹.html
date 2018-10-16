@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#h1 {
+				font-size: 100px;
+				color: black;
+				margin-bottom: 50px;
+			}
+			
+			#h2 {
+				border: 1px solid red;
+				width: 500px;
+				height: 250px;
+				
+				margin-left: 430px;
+				background-color: lightskyblue;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div style="font-size: 50px; color: red;" align="center">许阿丹我爱你</div>
+		<div id="h2">
+			<div id="h1" align="center">包子</div>
+			<div align="center">
+				<input type="button" value="开始选择早餐" onclick="run(),start()" />
+				<input type="button" value="暂停" onclick="runc()" />
+			</div>
+
+		</div>
+
+		<script>
+			var time;
+
+			function run() {
+				var arr = ["包子", "油条", "菜夹馍", "煎饼果子", "鸡蛋灌饼", "肠粉"];
+				var d = document.getElementById("h1");
+				var r = parseInt(Math.random() * arr.length);
+				d.innerHTML = arr[r];
+			}
+			
+
+			function runc() {
+				clearInterval(time);
+			}
+
+			function start() {
+				time = setInterval("run()", 100);
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .h1{
+            width:500px;
+            height: 300px;
+            border: 1px solid white;
+            background-color: aquamarine;
+            margin: auto;/*居中*/
+            text-align: center;
+        }
+        .h2{
+            font-size: 50px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="h1">
+    <div class="h2" id="h2">张三</div>
+    <div align="center" style="margin-top: 100px">
+        <input type="button" value="开始" onclick="run(),start()" />
+        <input type="button" value="暂停" onclick="run1()" />
+    </div>
+</div>
+
+<script>
+    var time;
+    function run() {
+        var arr = ["张三", "李四", "王五", "赵六", "徐奔奔", "王霄"];
+        var d = document.getElementById("h2");
+        var r = parseInt(Math.random() * arr.length);
+        d.innerHTML = arr[r];
+    }
+
+    function run1() {
+        clearInterval(time);
+    }
+
+    function start() {
+        time = setInterval("run()", 30);
+    }
+</script>
+
+</body>
+</html>

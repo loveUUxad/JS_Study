@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			function run(){
+		
+				var h1=document.getElementById("h1");
+				h1.checked=true;
+	
+				var h2=document.getElementById("h2");
+				h2.checked=true;
+	
+				var h3=document.getElementById("h3");
+				h3.checked=true;
+		
+			}
+
+			function run1(){
+		
+				var h1=document.getElementById("h1");
+				h1.checked=false;
+	
+				var h2=document.getElementById("h2");
+				h2.checked=false;
+	
+				var h3=document.getElementById("h3");
+				h3.checked=false;
+		
+			}
+			
+			function run2(){
+				var h1=document.getElementById("h1");
+				var f=h1.checked;
+				
+				if (f==true) {
+					h1.checked=false;
+				}else{
+					h1.checked=true;
+				}
+				
+				var h2=document.getElementById("h2");
+				if (h2.checked==true) {
+					h2.checked=false;
+				}else{
+					h2.checked=true;
+				}
+				
+				var h3=document.getElementById("h3");
+				if (h3.checked==true) {
+					h3.checked=false;
+				}else{
+					h3.checked=true;
+				}
+			}
+		</script>
+	</head>
+	<body onload="window.onload">
+		<table align="center" border="1px" width="50%">
+			<tr>
+				<th></th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>家庭住址</th>
+			</tr>
+			
+			<tr align="center">
+				<td>
+					<input type="checkbox"  id="h1" />
+				</td>
+				<td>孙悟空</td>
+				<td>20</td>
+				<td>花果山</td>
+			</tr>
+			
+			<tr align="center">
+				<td>
+					<input type="checkbox"  id="h2"/>
+				</td>
+				<td>猪八戒</td>
+				<td>34</td>
+				<td>高老庄</td>
+			</tr>
+			
+			<tr align="center">
+				<td>
+					<input type="checkbox" id="h3"/>
+				</td>
+				<td>沙师兄</td>
+				<td>23</td>
+				<td>流沙河</td>
+			</tr>
+			
+			<tr align="center">
+				<td colspan="2">
+					<input type="button" value="全选" onclick="run()" />
+				</td>
+				<td>
+					<input type="button" value="全不选" onclick="run1()" />
+				</td>
+				<td>
+					<input type="button" value="反选" onclick="run2()"/>
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

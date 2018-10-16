@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.t1 {
+				background-color: red;
+			}
+			
+			.t2 {
+				background-color: blue;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<table border="1px" width="50%" align="center">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<script>
+			var arr = document.getElementsByTagName("tr");
+			for(var i = 0; i < arr.length; i++) {
+				if(i % 2 == 0) {
+					arr[i].className = "t2";
+				} else {
+					arr[i].className = "t1";
+				}
+			}
+		</script>
+	</body>
+
+</html>

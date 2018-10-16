@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run(){
+				alert("你好");
+			}
+			function run2(){
+				alert("大家好");
+			}
+			
+			window.onclick=function(){
+				var d=document.getElementById("h1");
+//				d.onclick=run();
+//				d.onclick=run2();
+				d.onmouseover=function(){
+					run();
+					run2();
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input type="text" id="h1" />
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function run(){
+				var myDate=new Date();
+				var time=myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getUTCDate()+"日"+"  "+myDate.getHours()+":"+myDate.getMinutes()+":"+myDate.getSeconds();
+				var d=document.getElementById("h1");
+				d.innerHTML=time;
+			}
+			setInterval("run()",1000);
+		</script>
+	</head>
+	<body>
+		<div id="h1"></div>
+	</body>
+</html>
